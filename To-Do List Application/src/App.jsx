@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.jsx"
 
 const App = () => {
   return (
-    <div className="bg-background dark:bg-dark-background text-primary-text dark:text-dark-primary-text">
+    <div className="bg-background dark:bg-dark-background text-primary-text dark:text-dark-primary-text relative flex flex-col min-h-dvh">
       <Navbar />
       <Hero />
       <Footer />

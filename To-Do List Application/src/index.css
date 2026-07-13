@@ -12,14 +12,14 @@
     --color-primary-text: #1a1a1a;
     --color-secondary-text: #666666;
     --color-primary-accent: #007aff;
-    --color-input: #f9fafb;
+    --color-input: #fafafa;
+    --color-divider: #9ca3af;
     
-    --color-dark-background: #121212;
-    --color-dark-card: #1e1e1e;
+    --color-dark-background: #151515;
+    --color-dark-card: #1a1a1a;
     --color-dark-primary-text: #fafafa;
     --color-dark-secondary-text: #b0b0b0;
     --color-dark-primary-accent: #0a84ff;
-    --color-input: #1f2937;
-
-    --color-divider: #2c2c2c;
+    --color-dark-input: #1f1f1f;
+    --color-dark-divider: #333333;
 }

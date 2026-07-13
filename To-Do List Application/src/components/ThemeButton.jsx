@@ -6,7 +6,7 @@ const ThemeButton = () => {
     return (
         <button onClick={() => {
             toggleTheme()
-        }} className="text-primary-text dark:text-dark-primary-text bg-primary-accent dark:bg-dark-primary-accent px-2 py-1 rounded-sm border-none text-sm">Toggle Theme</button>
+        }} className="text-primary-text dark:text-dark-primary-text bg-card dark:bg-dark-card border border-divider dark:border-dark-divider font-medium w-18 py-1 rounded-sm text-sm capitalize">{theme}</button>
     )
 }
 
