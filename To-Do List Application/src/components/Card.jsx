@@ -5,13 +5,14 @@ const Card = ({ title, description, taskId }) => {
     const { tasks, setTasks } = useContext(TasksContext)
 
     const handleShowDeleteBtn = (e) => {
-        e.target.children[0].children[1].classList.remove("invisible")
+        e.target?.children[0].children[1].classList.remove("invisible")
     }
     const handleHideDeleteBtn = (e) => {
-        e.target.children[0].children[1].classList.add("invisible")
+        e.target?.children[0].children[1].classList.add("invisible")
     }
     const handleDeleteCard = (e) => {
-        if (e.target.tagName.toLowerCase() === 'button') {
+        console.log(e.target.tagName)
+        if (e.target?.tagName.toLowerCase() === 'button') {
             const card = e.target.parentElement.parentElement
             const taskId = card.getAttribute('id')
             const allTasks = tasks
@@ -32,13 +33,13 @@ const Card = ({ title, description, taskId }) => {
         }
     }
     return (
-        <div onClick={() => {
-            handleDeleteCard()
-            handleShowDeleteBtn()
+        <div onClick={(e) => {
+            handleDeleteCard(e)
+            handleShowDeleteBtn(e)
         }} onMouseOver={handleShowDeleteBtn} onMouseOut={handleHideDeleteBtn} className="bg-card dark:bg-dark-card text-primary-text dark:text-dark-primary-text block p-6 border border-divider dark:border-dark-divider rounded-base shadow-xs" id={taskId}>
             <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex gap-4 flex justify-between pointer-events-none">
                 <div className="flex gap-4">
-                    <input id="default-checkbox" type="checkbox" value="" className="size-6 border border-divider dark:border-dark-divider rounded-xs mt-2 pointer-events-auto"></input>
+                    <input id="default-checkbox" type="checkbox" value="" className="size-6 border border-divider dark:border-dark-divider rounded-xs mt-2 pointer-events-auto bg-background checked:bg-primary-accent"></input>
                     <p className="text-primary-text dark:text-dark-primary-text">{title}</p>
                 </div>
                 <button onMouseOver={(e) => {
